@@ -1,0 +1,9 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Email Verification Sent{% endblock %}
+
+{% block content %}
+    <h2>Email Verification Sent</h2>
+    <p>An email with a verification link has been sent to your email address. Please check your inbox.</p>
+    <a href="{% url 'home' %}">Back to Posts</a>
+{% endblock %}

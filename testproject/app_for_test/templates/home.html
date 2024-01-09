@@ -1,0 +1,16 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h2>Recent Posts</h2>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <strong>{{ post.author.username }}</strong> - {{ post.title }}<br>
+                {{ post.content }}<br>
+                <a href="{% url 'view_post' post.id %}">Read more</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
